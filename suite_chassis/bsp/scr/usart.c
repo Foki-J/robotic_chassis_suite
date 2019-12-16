@@ -122,7 +122,6 @@ void USART1_IRQHandler(void)
 		static char count;
 		static short buffValue[10];
 		ch=USART_ReceiveData(USART1);
-		USART_SendData(USART1,count);
     if ((count==0)||(count==1))  
 		{
 			if (ch == 0xFF)
@@ -138,12 +137,7 @@ void USART1_IRQHandler(void)
 		{
 			count=0;
 			if (ch == 0xFE)
-			{
-//				cmd_vel.vx = (buffValue[0]<<8)+buffValue[1];
-//				cmd_vel.vy = (buffValue[2]<<8)+buffValue[3];
-//				cmd_vel.w = (buffValue[4]<<8)+buffValue[5];
-//				cmd_vel.theta = (buffValue[6]<<8)+buffValue[7];
-//				cmd_vel.coordinateSwitch = (buffValue[8]<<8)+buffValue[9];	
+			{	
 				cmd_vel.vx = (short)buffValue[0]<<8|buffValue[1];
 				cmd_vel.vy = (short)(buffValue[2]<<8)|buffValue[3];
 				cmd_vel.w = (short)(buffValue[4]<<8)|buffValue[5];

@@ -35,7 +35,7 @@ void init(void)
 	for(int i=0;i<4;i++)
 	{
 		motorPID[i].Kp = 2;
-		motorPID[i].Ki = 0.01;
-		motorPID[i].Kd = 0.1;
+		motorPID[i].Ki = 0.02;
+		motorPID[i].Kd = 5;
 	}
 }

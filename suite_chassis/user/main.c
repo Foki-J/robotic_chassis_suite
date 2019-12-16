@@ -49,8 +49,8 @@ int main(void)
 				LED4=1;
 			break;
 		}
-//		if((timer%50)==0)//周期500ms
-//			LED0=!LED0;
+		if((timer%50)==0)//周期500ms
+			LED0=!LED0;
 	}
 }
 

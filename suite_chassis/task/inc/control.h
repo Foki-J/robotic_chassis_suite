@@ -25,6 +25,9 @@ typedef struct
 	short w;
 	short theta;
 	short coordinateSwitch;
+	short v1;
+	short v2;
+	short v3;
 } cmd_vel_TypeDef;
 extern PIDTypeDef *motorPID;
 extern cmd_vel_TypeDef cmd_vel;
